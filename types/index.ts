@@ -5,6 +5,8 @@ export interface IUserDb {
   name: string;
   email: string;
   passwordHash: string;
+  confirmed: boolean;
+  refreshToken: string | null;
 }
 
 export interface IUser {
@@ -14,4 +16,6 @@ export interface IUser {
   name: string;
   email: string;
   passwordHash: string;
+  confirmed: boolean;
+  refreshToken: string | null;
 }
