@@ -1,6 +1,5 @@
 import { Router } from "express";
 import dotenv from "dotenv";
-import jwt from "jsonwebtoken";
 
 import {
   findUserBy,
