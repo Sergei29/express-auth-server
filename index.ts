@@ -1,21 +1,18 @@
 import express, { Express, Request, Response } from "express";
+import cookieParser from "cookie-parser";
 import logger from "morgan";
 import dotenv from "dotenv";
 import cors from "cors";
-import cookieParser from "cookie-parser";
 
+import { credentials } from "./middlewares/credentials";
 import { authRouter } from "./routes/auth";
 import { CORS_OPTIONS } from "./constants";
-import { credentials } from "./middlewares/credentials";
 
 dotenv.config();
 
 const app: Express = express();
 
 const port = process.env.PORT || 5050;
-const rpID = "localhost";
-const protocol = "http";
-const expectedOrigin = `${protocol}://${rpID}:${port}`;
 
 app.use(credentials);
 app.use(cors(CORS_OPTIONS));

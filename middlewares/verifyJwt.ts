@@ -7,8 +7,8 @@ import {
   reGenerateTokens,
   saveUserToken,
 } from "../lib/api";
-import { db } from "../lib/db";
 import { TOKEN } from "../constants";
+import { db } from "../lib/db";
 
 export const verifyAccessToken: RequestHandler = async (req, res, next) => {
   const accessToken = req.cookies[TOKEN.ACCESS_JWT];

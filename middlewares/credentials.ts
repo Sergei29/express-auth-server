@@ -1,4 +1,5 @@
 import { RequestHandler } from "express";
+
 import { ALLOWED_ORIGINS } from "../constants";
 
 export const credentials: RequestHandler = (req, res, next) => {
