@@ -19,3 +19,8 @@ export interface IUser {
   confirmed: boolean;
   refreshToken: string | null;
 }
+
+export interface IUserInfo {
+  name: string;
+  email: string;
+}
